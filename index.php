@@ -58,8 +58,20 @@
 			
 		}
 		.three_inner{
-			padding-top: 200px;
-			padding-bottom: 200px;
+			padding-top: 150px;
+			padding-bottom: 150px;
+		}
+		.btnp{
+			color: #fff;
+			background: #288cff;
+			border: 1px solid #288cff;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			display: inline;
+			border-radius: 3px;
+			cursor: pointer;
 		}
 	</style>
 </head>
@@ -143,16 +155,13 @@
 
 <div class="three">
 	<div class="uk-container three_inner">
-		<div class="uk-child-width-expand@s uk-text-center" uk-grid>
-			<div>
-				<div><img src="images/about.png"></div>
-			</div>
-			<div>
-				<div style="text-align: justify;">Nam eget purus convallis enim scelerisque convallis vitae quis enim. Ut iaculis porta velit, ac semper lectus varius eget. Duis tempor dolor eu dolor lobortis, vitae rutrum enim lacinia. Etiam tristique orci vel sem viverra, et molestie arcu tempus. Nullam scelerisque enim non ligula aliquet iaculis. Suspendisse tristique sapien vel ultrices pulvinar. Ut eu urna vitae metus lobortis blandit. Morbi sit amet bibendum sem. Curabitur et nunc quis est faucibus aliquet ut sed odio. Nulla molestie velit vitae suscipit commodo. Nulla facilisi. Maecenas vehicula ex erat, ornare rhoncus velit porttitor sed. Aenean accumsan sapien ante. Suspendisse venenatis condimentum diam, vel mattis mauris varius at. Etiam nisl sapien, accumsan eu metus at, porttitor congue libero. Maecenas imperdiet elementum scelerisque.</div>
-			</div>
-
-			
-		</div>
+		<center>
+			<h1>Don't let the toll booth stop you.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia commodo ex, et condimentum tellus scelerisque at. </p>
+			<br>
+			<br>
+			<div class="btnp">Get Started</div>
+		</center>
 	</div>
 </div>
 
