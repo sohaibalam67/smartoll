@@ -114,9 +114,9 @@
 	<br>
 	<br>
 
-	<div class="uk-child-width-expand@s uk-text-center" uk-grid uk-parallax="opacity: 0,1; viewport: 0.6">
+	<div class="uk-child-width-expand@s uk-text-center" uk-grid>
     
-    <div>
+    <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
     	<div class="uk-card uk-card-default uk-card-hover uk-card-body">
     		<span uk-icon="icon: bolt; ratio: 2"></span>
             <h3 class="uk-card-title">Fast</h3>
@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <div>
+    <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
     	<div class="uk-card uk-card-default uk-card-hover uk-card-body">
     		<span uk-icon="icon: lifesaver; ratio: 2"></span>
             <h3 class="uk-card-title">Reliable</h3>
@@ -132,7 +132,7 @@
         </div>
     </div>
 
-    <div>
+    <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
     	<div class="uk-card uk-card-default uk-card-hover uk-card-body">
     		<span uk-icon="icon: check; ratio: 2"></span>
             <h3 class="uk-card-title">Hassle Free</h3>
@@ -140,7 +140,7 @@
         </div>
     </div>
 
-    <div>
+    <div uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
     	<div class="uk-card uk-card-default uk-card-hover uk-card-body">
     		<span uk-icon="icon: phone; ratio: 2"></span>
             <h3 class="uk-card-title">Smart</h3>
@@ -156,11 +156,14 @@
 <div class="three">
 	<div class="uk-container three_inner">
 		<center>
+			<div uk-scrollspy="cls: uk-animation-scale-up; delay: 200; repeat: true">
 			<h1>Don't let the toll booth stop you.</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia commodo ex, et condimentum tellus scelerisque at. </p>
+
 			<br>
 			<br>
 			<div class="btnp">Get Started</div>
+			</div>
 		</center>
 	</div>
 </div>
