@@ -37,8 +37,8 @@
 
 		@media only screen and (max-width: 600px){
 			.loginn_card{
-			min-width: 320px;
-			max-width: 320px;
+			min-width: 90%;
+			max-width: 90%;
 			min-height: 420px;
 			max-height: 420px;
 			padding-left: 10px;
