@@ -87,8 +87,8 @@
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                         
-                        <li><a href="#">LOGIN</a></li>
-                        <li><a href="#">REGISTER</a></li>
+                        <li><a href="login.php">LOGIN</a></li>
+                        <li><a href="register.php">REGISTER</a></li>
                     </ul>
                 </div>
             </li>
@@ -98,7 +98,7 @@
 		</nav>
 
 		<center>
-			<div uk-parallax="blur: 10; scale: 1,0.6;">
+			<div uk-parallax="scale: 1,0.3; opacity: 1, 0.3;">
 				<h1 class="tagline">Tolling made easy.</h1>
 				<p class="det">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus lacus.</p>
 			</div>
@@ -162,7 +162,7 @@
 
 			<br>
 			<br>
-			<div class="btnp">Get Started</div>
+			<a href="login.php"><div class="btnp">Get Started</div></a>
 			</div>
 		</center>
 	</div>
