@@ -34,6 +34,17 @@
 			border-radius: 4px;
 			box-shadow: 0px 10px 15px 2px rgba(0,0,0,0.2);
 		}
+
+		@media only screen and (max-width: 600px){
+			.loginn_card{
+			min-width: 320px;
+			max-width: 320px;
+			min-height: 420px;
+			max-height: 420px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		}
 	</style>
 </head>
 <body>
@@ -53,7 +64,7 @@
 	    				<input type="text" name="username" placeholder="Username" required class="uk-input" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-top-color: #f492ac; border-right-color: #f492ac">
 	    				<input type="password" name="password" placeholder="Password" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac; border-bottom-color: #f492ac">
 	    				<br><br>
-	    				<input type="submit" name="submit" value="LOG IN" style="min-height: 50px; background-color: #ef5585; color: #fff; border: 0px solid white; min-width: 320px; border-radius: 3px; font-size: 10pt; font-weight: 600">
+	    				<input type="submit" name="submit" value="LOG IN" style="min-height: 50px; background-color: #ef5585; color: #fff; border: 0px solid white; min-width: 100%; border-radius: 3px; font-size: 10pt; font-weight: 600">
 	    			</form>
 	    			<br><br><div style="font-size: 10pt;">New to SmarToll? <a href="register.php" style="color: #8869a6">Create Account</a></div>
 	    			</div>

@@ -34,6 +34,17 @@
 			border-radius: 4px;
 			box-shadow: 0px 10px 15px 2px rgba(0,0,0,0.2);
 		}
+
+		@media only screen and (max-width: 600px){
+			.loginn_card{
+			min-width: 320px;
+			max-width: 320px;
+			min-height: 420px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 10px;
+		}
+		}
 	</style>
 </head>
 <body>
