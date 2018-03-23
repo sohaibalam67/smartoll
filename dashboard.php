@@ -179,7 +179,7 @@
         <div class="uk-card uk-card-default uk-card-body "><h4>Amount Unpaid</h4> <br> <span style="font-size: 40pt; color: #013b84;">98</span> <span style="color: #013b84; padding-left: 3px;">rupees</span> <br>
 			<br>
 			<center><div style="min-width: 80%; max-width: 80%; margin-top: 30px">
-				 <button class="uk-button uk-button-danger">Pay</button>
+				<a href="checkout.php"><button class="uk-button uk-button-danger">Pay</button></a> 
 			</div></center>
         </div>
     </div>

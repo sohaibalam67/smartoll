@@ -130,6 +130,11 @@
     </li>
 </ul>
 
+<br>
+<br>
+
+
+	<center> <a href="dashboard.php"><div class="uk-button uk-button-danger">Go Back to Dashboard</div></a></center>
 
 	</div>
 
