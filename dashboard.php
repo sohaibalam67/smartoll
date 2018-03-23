@@ -12,7 +12,7 @@
 
 	<style type="text/css">
 		.sidebar{
-			background: #2a58ad;
+			background: #461b93;
 			min-width: 22%;
 			float: left;
 			margin-right: 0%;
@@ -65,7 +65,7 @@
 			min-height: 170px;
 			width: 170px;
 			height: auto;
-			box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.2);
+			box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.2);
 			border-radius: 500px;
 
 		}
@@ -110,7 +110,7 @@
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container" uk-navbar="dropbar: true;" style="position: relative; z-index: 980;max-height: 100px; background: #fff; box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.1);">
     	<div class="uk-navbar-left" style="padding-left: 5%">
-    		<span uk-icon="icon: user; ratio: 1"></span> <span style="font-size: 13pt; padding-left: 5px">DASHBOARD</span>
+    		<span uk-icon="icon: user; ratio: 1"></span><span style="font-size: 13pt; padding-left: 5px">DASHBOARD</span>
     	</div>
         <div class="uk-navbar-right" style="padding-right: 5%">
 
@@ -151,24 +151,24 @@
 
 <h4>Stats</h4>
 
-<div class="uk-child-width-expand@s uk-text-center" uk-grid>
+<div class="uk-child-width-expand@s uk-text-center uk-grid-match" uk-grid>
     <div>
-        <div class="uk-card uk-card-default uk-card-body "><h4>Heading</h4> <br> <span style="font-size: 40pt; color: #013b84;">15</span> <span style="color: #013b84; padding-left: 3px;">times</span> <br>
+        <div class="uk-card uk-card-default uk-card-body "><h4>Tolls Crossed</h4> <br> <span style="font-size: 40pt; color: #013b84;">15</span> <span style="color: #013b84; padding-left: 3px;">Tolls</span> <br>
 			<br>
 			<center><div style="min-width: 80%; max-width: 80%; margin-top: 30px">
-				<div style="float: left;"><h5 style="color: rgba(0,0,0,0.6);"><b>Value</b></h5> <span style="color: #4eafbf; font-size: 20pt">18</span></div>
-				<div style="float: right;"><h5 style="color: rgba(0,0,0,0.6);"><b>Other Value</b></h5> <span style="color: #8aa942; font-size: 20pt">43</span></div>
+				<div style="float: left;"><h5 style="color: rgba(0,0,0,0.6);"><b>This month</b></h5> <span style="color: #4eafbf; font-size: 20pt">1</span></div>
+				<div style="float: right;"><h5 style="color: rgba(0,0,0,0.6);"><b>This Year</b></h5> <span style="color: #8aa942; font-size: 20pt">14</span></div>
 			</div></center>
         </div>
     </div>
     
 
 	<div>
-        <div class="uk-card uk-card-default uk-card-body "><h4>Heading</h4> <br> <span style="font-size: 40pt; color: #013b84;">25</span> <span style="color: #013b84; padding-left: 3px;">times</span> <br>
+        <div class="uk-card uk-card-default uk-card-body "><h4>Total Amount Paid</h4> <br> <span style="font-size: 40pt; color: #013b84;">25</span> <span style="color: #013b84; padding-left: 3px;">rupees</span> <br>
 			<br>
 			<center><div style="min-width: 80%; max-width: 80%; margin-top: 30px">
-				<div style="float: left;"><h5 style="color: rgba(0,0,0,0.6);"><b>Value</b></h5> <span style="color: #4eafbf; font-size: 20pt">18</span></div>
-				<div style="float: right;"><h5 style="color: rgba(0,0,0,0.6);"><b>Other Value</b></h5> <span style="color: #8aa942; font-size: 20pt">43</span></div>
+				<div style="float: left;"><h5 style="color: rgba(0,0,0,0.6);"><b>This Month</b></h5> <span style="color: #4eafbf; font-size: 20pt">18</span></div>
+				<div style="float: right;"><h5 style="color: rgba(0,0,0,0.6);"><b>This Year</b></h5> <span style="color: #8aa942; font-size: 20pt">43</span></div>
 			</div></center>
         </div>
     </div>
@@ -176,11 +176,10 @@
 
 
     <div>
-        <div class="uk-card uk-card-default uk-card-body "><h4>Heading</h4> <br> <span style="font-size: 40pt; color: #013b84;">98</span> <span style="color: #013b84; padding-left: 3px;">times</span> <br>
+        <div class="uk-card uk-card-default uk-card-body "><h4>Amount Unpaid</h4> <br> <span style="font-size: 40pt; color: #013b84;">98</span> <span style="color: #013b84; padding-left: 3px;">rupees</span> <br>
 			<br>
 			<center><div style="min-width: 80%; max-width: 80%; margin-top: 30px">
-				<div style="float: left;"><h5 style="color: rgba(0,0,0,0.6);"><b>Value</b></h5> <span style="color: #4eafbf; font-size: 20pt">18</span></div>
-				<div style="float: right;"><h5 style="color: rgba(0,0,0,0.6);"><b>Other Value</b></h5> <span style="color: #8aa942; font-size: 20pt">43</span></div>
+				 <button class="uk-button uk-button-danger">Pay</button>
 			</div></center>
         </div>
     </div>
