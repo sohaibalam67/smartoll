@@ -85,6 +85,10 @@
 			}
 		}
 
+		.tab_title{
+			font-weight: bold;
+		}
+
 
 	</style>
 </head>
@@ -145,8 +149,25 @@
 
 	<h4>Primary info</h4>
 	<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
-    <h3 class="uk-card-title">Your Information Here</h3>
-    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h3 class="uk-card-title">Basic Information</h3>
+    <table class="uk-table">
+    	<tr>
+    		<td class="tab_title">Phone no.</td>
+    		<td>8867989898</td>
+    	</tr>
+    	<tr>
+    		<td class="tab_title">Vehicle No.</td>
+    		<td>KA 04 7643</td>
+    	</tr>
+    	<tr>
+    		<td class="tab_title">DL No.</td>
+    		<td>767864</td>
+    	</tr>
+    	<tr>
+    		<td class="tab_title">State</td>
+    		<td>Karnataka</td>
+    	</tr>
+    </table>
 	</div>
 
 <h4>Stats</h4>
@@ -164,7 +185,7 @@
     
 
 	<div>
-        <div class="uk-card uk-card-default uk-card-body "><h4>Total Amount Paid</h4> <br> <span style="font-size: 40pt; color: #013b84;">25</span> <span style="color: #013b84; padding-left: 3px;">rupees</span> <br>
+        <div class="uk-card uk-card-default uk-card-body "><h4>Total Amount Paid</h4> <br> <span style="font-size: 40pt; color: #013b84;">25</span> <span style="color: #013b84; padding-left: 3px;">INR</span> <br>
 			<br>
 			<center><div style="min-width: 80%; max-width: 80%; margin-top: 30px">
 				<div style="float: left;"><h5 style="color: rgba(0,0,0,0.6);"><b>This Month</b></h5> <span style="color: #4eafbf; font-size: 20pt">18</span></div>
@@ -176,7 +197,7 @@
 
 
     <div>
-        <div class="uk-card uk-card-default uk-card-body "><h4>Amount Unpaid</h4> <br> <span style="font-size: 40pt; color: #013b84;">98</span> <span style="color: #013b84; padding-left: 3px;">rupees</span> <br>
+        <div class="uk-card uk-card-default uk-card-body "><h4>Amount Unpaid</h4> <br> <span style="font-size: 40pt; color: #013b84;">98</span> <span style="color: #013b84; padding-left: 3px;">INR</span> <br>
 			<br>
 			<center><div style="min-width: 80%; max-width: 80%; margin-top: 30px">
 				<a href="checkout.php"><button class="uk-button uk-button-danger">Pay</button></a> 
@@ -188,6 +209,40 @@
 
 </div>
 
+
+<h4>Last 5 Tolls Crossed</h4>
+	<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+    <table class="uk-table uk-table-striped">
+    <thead>
+        <tr>
+            <th>Place</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Place 1</td>
+            <td>Rs. 30</td>
+        </tr>
+        <tr>
+            <td>Place 2</td>
+            <td>Rs. 50</td>
+        </tr>
+        <tr>
+            <td>Place 3</td>
+            <td>Rs. 40</td>
+        </tr>
+          <tr>
+            <td>Place 4</td>
+            <td>Rs. 20</td>
+        </tr>
+          <tr>
+            <td>Place 5</td>
+            <td>Rs. 40</td>
+        </tr>
+    </tbody>
+</table>
+	</div>
 
 
 

@@ -63,8 +63,7 @@
 	    			<div style="max-width: 320px">
 	    			<form method="post" action="">
 	    				<input type="text" name="name" placeholder="Name" required class="uk-input" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-top-color: #f492ac; border-right-color: #f492ac">
-	    				<input type="text" name="aadhar" placeholder="phone number" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;">
-	    				<input type="text" name="aadhar" placeholder="Adhaar number" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;border-bottom-color: #f492ac">
+	    				<input type="text" name="aadhar" placeholder="Phone Number" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;border-bottom-color: #f492ac">
 	    				<br><br>
 	    				<input type="submit" name="submit" value="REGISTER" style="min-height: 50px; background-color: #ef5585; color: #fff; border: 0px solid white; min-width: 320px; border-radius: 3px; font-size: 10pt; font-weight: 600">
 	    			</form>
