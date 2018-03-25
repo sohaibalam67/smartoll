@@ -83,11 +83,11 @@
                	<form class="uk-grid-small" uk-grid>
 				    <div class="uk-width-1-1">
 				    	 card Number
-				        <input class="uk-input" type="text" placeholder="Card Number">
+				        <input class="uk-input" type="number" placeholder="Card Number">
 				    </div>
 				    <div class="uk-width-1-2@s">
 				    	 cvv
-				        <input class="uk-input" type="text" placeholder="CVV">
+				        <input class="uk-input" type="number" placeholder="CVV">
 				    </div>
 				    <div class="uk-width-1-4@s">
 				    	month
@@ -108,7 +108,7 @@
 				    </div>
 				    <div class="uk-width-1-4@s">
 				    	year
-				        <input class="uk-input" type="text" placeholder="Year">
+				        <input class="uk-input" type="number" placeholder="Year">
 				    </div>
 				    <div class="uk-width-1-4@s"> <input type="submit" name="" value="Pay" class="uk-button uk-button-danger"></div>
 				  

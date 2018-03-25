@@ -12,7 +12,7 @@
 
 	<style type="text/css">
 		.sidebar{
-			background: #461b93;
+			background: url('images/overlay.png'), #461b93;
 			min-width: 22%;
 			float: left;
 			margin-right: 0%;
