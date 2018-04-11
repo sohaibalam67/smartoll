@@ -37,8 +37,9 @@ $conn=mysqli_connect('localhost','root','','tolldb');
 
 echo '
 
-	
-	<table border=1 style="font-size:15pt; font-family:arial;">
+	<form action="_user_verify.php" method="post" >
+	<input type="hidden" value="'.$id.'" name="id">
+	<table align=center border=1 style="font-size:15pt; font-family:arial;">
 	<tr>
 	<td>UID</td><td>'.$uid.'</td>
 	</tr>
@@ -60,8 +61,15 @@ echo '
 	<tr>
 	<td>DOB</td><td>'.$dob.'</td>
 	</tr>
+	<tr>
+	<td>Vehicle Number</td><td><input type="text" name="vnm"></td>
+	</tr>
+	<tr>
+	<td>DL Number</td><td><input type="text" name="dnm"></td>
+	</tr>
 
-</table><br><center><a href="_user_verify.php?id='.$id.'"><button>Verify</button></a></center>';
+
+</table><br><center><input type="submit" style="font-size:15pt" value="Verify"></center></form>';
 
 
 

@@ -10,10 +10,23 @@ $conn=mysqli_connect('localhost','root','','tolldb');
    }
    
    $sql = 'SELECT id, name, updated, verified FROM user WHERE updated=1 AND verified=0';
-
- 
    $retval = mysqli_query( $conn, $sql );
    
+   $sql1 = 'SELECT COUNT(*) as nums from user where updated=1 AND verified=0';
+   $retval1 = mysqli_query( $conn, $sql1 );
+
+   $sql2 = 'SELECT COUNT(*) from user';
+   $retval2 = mysqli_query( $conn, $sql2 );
+   $counts2=0;
+   $row2 = mysqli_fetch_array($retval2, MYSQLI_BOTH);
+   $counts2=$row2[0];
+
+
+   $counts=0;
+   $row1 = mysqli_fetch_array($retval1, MYSQLI_BOTH);
+   $counts=$row1[0];
+
+
    if(! $retval) {
       die('Could not select data');
    }
@@ -174,7 +187,7 @@ mysqli_close($conn);
 
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
-        <div class="uk-card uk-card-default uk-card-body" style="padding: 7px"><span uk-icon="icon: users; ratio: 1.5" style="float: right; background: #fcbb3c; padding: 20px"></span><span class="q_stat_head">Total Users</span> <br><span class="num">1000</span></div>
+        <div class="uk-card uk-card-default uk-card-body" style="padding: 7px"><span uk-icon="icon: users; ratio: 1.5" style="float: right; background: #fcbb3c; padding: 20px"></span><span class="q_stat_head">Total Users</span> <br><span class="num"><?php echo $counts2;?></span></div>
     </div>
    <div>
         <div class="uk-card uk-card-default uk-card-body" style="padding: 7px"><span uk-icon="icon: menu; ratio: 1.5" style="float: right; background: #75cbe8; padding: 20px"></span><span class="q_stat_head">Total Tolls</span> <br><span class="num">567</span></div>
@@ -183,7 +196,7 @@ mysqli_close($conn);
         <div class="uk-card uk-card-default uk-card-body" style="padding: 7px"><span uk-icon="icon:  bolt; ratio: 1.5" style="float: right; background: #f48259; padding: 20px"></span><span class="q_stat_head">Total Revenue</span> <br><span class="num">45920</span></div>
     </div>
    <div>
-        <div class="uk-card uk-card-default uk-card-body" style="padding: 7px"><span uk-icon="icon: bell; ratio: 1.5" style="float: right; background: #adca63; padding: 20px"></span><span class="q_stat_head">Not Verified</span> <br><span class="num">86</span></div>
+        <div class="uk-card uk-card-default uk-card-body" style="padding: 7px"><span uk-icon="icon: bell; ratio: 1.5" style="float: right; background: #adca63; padding: 20px"></span><span class="q_stat_head">Not Verified</span> <br><span class="num"><?php echo $counts;?></span></div>
     </div>
 </div>
 
@@ -197,7 +210,7 @@ mysqli_close($conn);
         <tr>
             <th>Name</th>
             <th>Details</th>
-            <th>Action</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -206,7 +219,7 @@ mysqli_close($conn);
 
                     try{
                         foreach ($arr as $usr) {
-                        echo '<tr><td>'.$usr["name"].'</td><td><a href="_user_detail.php?id='.$usr["id"].'" target="_blank"><button class="uk-button uk-button-primary">Details</button></a></td><td><a href="_user_verify.php?id='.$usr["id"].'"><button class="uk-button uk-button-danger">Verify</button></a></td></tr>';
+                        echo '<tr><td>'.$usr["name"].'</td><td><a href="_user_detail.php?id='.$usr["id"].'" target="_blank"><button class="uk-button uk-button-primary">Details</button></a></tr>';
                     }
 
                     }catch(Exception $e){

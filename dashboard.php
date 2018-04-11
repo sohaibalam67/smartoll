@@ -15,7 +15,7 @@ $id=$_SESSION["id"];
 $conn=mysqli_connect('localhost','root','','tolldb');
 
 
- $sql1 = 'SELECT updated FROM user WHERE id="'.$id.'"';
+ $sql1 = 'SELECT updated,verified FROM user WHERE id="'.$id.'"';
 
  
    $retval1 = mysqli_query( $conn, $sql1 );
@@ -27,10 +27,17 @@ $conn=mysqli_connect('localhost','root','','tolldb');
  
  $row = mysqli_fetch_array($retval1, MYSQLI_BOTH);
       $updated=$row[0];
+      $verified=$row[1];
 
       if($updated==0){
       	header("Location: update.php");
       }
+
+      if($verified==0){
+      	session_destroy();
+      	header("Location: login.php?status=awaited");
+      }
+
 
 
 

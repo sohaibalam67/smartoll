@@ -92,6 +92,6 @@ $conn=mysqli_connect('localhost','root','','tolldb');
    header("Location: login.php?status=awaited");
    die();
    }
-   header("Location: dashboard.php?status=awaited");
+   header("Location: login.php?status=awaited");
 
 ?>
