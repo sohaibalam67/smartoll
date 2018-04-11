@@ -92,7 +92,7 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="about.php">ABOUT</a></li>
         </ul>
     		</div>
 		</nav>

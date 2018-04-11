@@ -148,7 +148,7 @@ mysqli_close($conn);
             <ul class="uk-navbar-nav">
                 <li class="uk-active"><a href="index.php">Home</a></li>
                 
-                <li><a href="login.php">Logout</a></li>
+                <li><a href="_logout.php">Logout</a></li>
             </ul>
 
         </div>
