@@ -75,6 +75,20 @@ if(isset($_SESSION["user"])){
     						<p>Login failed</p>
 							</div>
 						</div></center>"	;
+				}else if($_GET["status"]=="created"){
+					echo "<center><div style='max-width:320px'>
+							<div class='uk-alert-danger' uk-alert>
+    						<a class='uk-alert-close' uk-close></a>
+    						<p>Sucessfully Registered. Please login to continue.</p>
+							</div>
+						</div></center>"	;
+				}else if($_GET["status"]=="awaited"){
+					echo "<center><div style='max-width:320px'>
+							<div class='uk-alert-danger' uk-alert>
+    						<a class='uk-alert-close' uk-close></a>
+    						<p>We will email you when your account is verified.</p>
+							</div>
+						</div></center>"	;
 				}
 			}
 		?>

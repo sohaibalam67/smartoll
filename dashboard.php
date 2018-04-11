@@ -61,6 +61,8 @@ $conn=mysqli_connect('localhost','root','','tolldb');
       $state=$row[5];
       $phone=$row[6];
       $dob=$row[7];
+      $rc=$row[8];
+      $dl=$row[9];
 
 
 
@@ -230,11 +232,11 @@ mysqli_close($conn);
     	</tr>
     	<tr>
     		<td class="tab_title">Vehicle No.</td>
-    		<td><?php echo $vnum;?></td>
+    		<td><?php echo $rc;?></td>
     	</tr>
     	<tr>
     		<td class="tab_title">DL No.</td>
-    		<td><?php echo $dlnum;?></td>
+    		<td><?php echo $dl;?></td>
     	</tr>
     	<tr>
     		<td class="tab_title">State</td>

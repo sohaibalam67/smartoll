@@ -1,3 +1,37 @@
+<?php
+error_reporting(0);
+session_start();
+
+
+$conn=mysqli_connect('localhost','root','','tolldb');
+
+ if(!$conn ) {
+      die('Could not connect');
+   }
+   
+   $sql = 'SELECT id, name, updated, verified FROM user WHERE updated=1 AND verified=0';
+
+ 
+   $retval = mysqli_query( $conn, $sql );
+   
+   if(! $retval) {
+      die('Could not select data');
+   }
+   
+   $i=0;
+   while($row = mysqli_fetch_assoc($retval)){
+
+    $arr[$i]=$row;+ 
+    $i++;
+}
+ 
+ 
+mysqli_close($conn);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -167,31 +201,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>User 1</td>
-            <td><button class="uk-button uk-button-primary">Details</button></td>
-            <td> <button class="uk-button uk-button-danger">Verify</button></td>
-        </tr>
-         <tr>
-            <td>User 2</td>
-            <td><button class="uk-button uk-button-primary">Details</button></td>
-            <td> <button class="uk-button uk-button-danger">Verify</button></td>
-        </tr>
-        <tr>
-            <td>User 3</td>
-            <td><button class="uk-button uk-button-primary">Details</button></td>
-            <td> <button class="uk-button uk-button-danger">Verify</button></td>
-        </tr>
-           <tr>
-            <td>User 4</td>
-            <td><button class="uk-button uk-button-primary">Details</button></td>
-            <td> <button class="uk-button uk-button-danger">Verify</button></td>
-        </tr>
-          <tr>
-            <td>User 5</td>
-            <td><button class="uk-button uk-button-primary">Details</button></td>
-            <td> <button class="uk-button uk-button-danger">Verify</button></td>
-        </tr>
+
+		<?php
+
+                    try{
+                        foreach ($arr as $usr) {
+                        echo '<tr><td>'.$usr["name"].'</td><td><a href="_user_detail.php?id='.$usr["id"].'" target="_blank"><button class="uk-button uk-button-primary">Details</button></a></td><td><a href="_user_verify.php?id='.$usr["id"].'"><button class="uk-button uk-button-danger">Verify</button></a></td></tr>';
+                    }
+
+                    }catch(Exception $e){
+                   
+                    }
+
+                    ?>
     </tbody>
 </table>
 	</div>

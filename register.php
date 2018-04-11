@@ -85,7 +85,7 @@ if(isset($_SESSION["user"])){
 	    			<div style="font-size: 20pt; padding-top: 50px; color: rgba(0,0,0,0.6); padding-bottom: 50px"><span uk-icon="icon: lock; ratio: 1.5"></span> Register</div>
 
 	    			<div style="max-width: 320px">
-	    			<form method="post" action="_register_sc.php">
+	    			<form method="post" action="otp.php">
 	    				<input type="text" name="name" placeholder="Name" required class="uk-input" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-top-color: #f492ac; border-right-color: #f492ac">
 	    				<input type="email" name="email" placeholder="email" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;">
 	    				<input type="password" name="password" placeholder="password" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;border-bottom-color: #f492ac">

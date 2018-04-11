@@ -104,23 +104,26 @@ $conn=mysqli_connect('localhost','root','','tolldb');
 	
 
 
-		<form class="uk-grid-small" uk-grid method="post" action="_update_script.php">
+		<form enctype="multipart/form-data" class="uk-grid-small" uk-grid method="post" action="_update_script.php">
 	    <div class="uk-width-1-1">
-	        <input class="uk-input" type="number" name="uid" placeholder="Aadhar Number" required>
+	        <input class="uk-input" type="text" name="uid" placeholder="Enter aadhar number" required>
 	    </div>
 	    <div class="uk-width-1-2@s">
-	        <input class="uk-input" type="text" name="v_num" placeholder="Vehicle Number">
+	    	<label>Upload Picture of Vehicle RC</label>
+	        <input class="uk-input" type="file" name="v_num" required>
 	    </div>
-	    <div class="uk-width-1-4@s">
-	        <input class="uk-input" type="text" name="dl_num" placeholder="DL Number">
+	    <div class="uk-width-1-2@s">
+	    	<label>Upload Picture of DL</label>
+	        <input class="uk-input" type="file" name="dl_num" required>
 	    </div>
-	    <div class="uk-width-1-4@s">
+	    <div class="uk-width-1-1@s">
+	    	<label>Enter Date of Birth</label>
 	        <input class="uk-input" type="date" name="dob" placeholder="DOB">
 	    </div>
-	    <div class="uk-width-1-2@s">
+	    <div class="uk-width-1-1@s">
 	        <input class="uk-input" type="text" name="city" placeholder="City">
 	    </div>
-	    <div class="uk-width-1-2@s">
+	    <div class="uk-width-1-1@s">
 	        <input class="uk-input" type="text" name="state" placeholder="State">
 	    </div>
 	     <div class="uk-width-1-1@s">
@@ -130,7 +133,8 @@ $conn=mysqli_connect('localhost','root','','tolldb');
 	    
 	   
 		</form>
-
+		<br><br>
+		<center><a href="_logout.php"><button class="uk-button uk-button-danger">Logout</button></a></center>
 
 
 	</div>
