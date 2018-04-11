@@ -1,3 +1,13 @@
+<?php
+error_reporting(0);
+session_start();
+
+if(isset($_SESSION["user"])){
+  header("Location: dashboard.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,17 +63,32 @@
 		require('navbar.php');
 	?>
 
-
+		
+		
   
     	<div class="login_container">
+
+    		<?php
+			if(isset($_GET["status"])){
+				if($_GET["status"]=="exists"){
+					echo "<center><div style='max-width:320px'>
+							<div class='uk-alert-danger' uk-alert>
+    						<a class='uk-alert-close' uk-close></a>
+    						<p>User already exists.</p>
+							</div>
+						</div></center>"	;
+				}
+			}
+		?>
 	    	<center>
 	    		<div class="loginn_card">
 	    			<div style="font-size: 20pt; padding-top: 50px; color: rgba(0,0,0,0.6); padding-bottom: 50px"><span uk-icon="icon: lock; ratio: 1.5"></span> Register</div>
 
 	    			<div style="max-width: 320px">
-	    			<form method="post" action="">
+	    			<form method="post" action="_register_sc.php">
 	    				<input type="text" name="name" placeholder="Name" required class="uk-input" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-top-color: #f492ac; border-right-color: #f492ac">
-	    				<input type="text" name="aadhar" placeholder="Phone Number" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;border-bottom-color: #f492ac">
+	    				<input type="email" name="email" placeholder="email" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;">
+	    				<input type="password" name="password" placeholder="password" required class="uk-input" style="border-top-left-radius: 0px; border-top-right-radius: 0px; min-height: 50px; border-left-color: #f492ac; border-right-color: #f492ac;border-bottom-color: #f492ac">
 	    				<br><br>
 	    				<input type="submit" name="submit" value="REGISTER" style="min-height: 50px; background-color: #ef5585; color: #fff; border: 0px solid white; min-width: 320px; border-radius: 3px; font-size: 10pt; font-weight: 600">
 	    			</form>

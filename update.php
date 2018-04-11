@@ -1,3 +1,30 @@
+<?php
+error_reporting(0);
+session_start();
+
+$id=$_SESSION["id"];
+$conn=mysqli_connect('localhost','root','','tolldb');
+
+
+ $sql1 = 'SELECT updated FROM user WHERE id="'.$id.'"';
+
+ 
+   $retval1 = mysqli_query( $conn, $sql1 );
+   
+   if(! $retval1) {
+      die('Could not select data');
+   }
+   
+ 
+ $row = mysqli_fetch_array($retval1, MYSQLI_BOTH);
+      $updated=$row[0];
+
+      if($updated==1){
+      	header("Location: dashboard.php");
+      }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,27 +104,27 @@
 	
 
 
-		<form class="uk-grid-small" uk-grid>
+		<form class="uk-grid-small" uk-grid method="post" action="_update_script.php">
 	    <div class="uk-width-1-1">
-	        <input class="uk-input" type="number" placeholder="Aadhar Number" required>
+	        <input class="uk-input" type="number" name="uid" placeholder="Aadhar Number" required>
 	    </div>
 	    <div class="uk-width-1-2@s">
-	        <input class="uk-input" type="text" placeholder="Vehicle Number">
+	        <input class="uk-input" type="text" name="v_num" placeholder="Vehicle Number">
 	    </div>
 	    <div class="uk-width-1-4@s">
-	        <input class="uk-input" type="text" placeholder="DL Number">
+	        <input class="uk-input" type="text" name="dl_num" placeholder="DL Number">
 	    </div>
 	    <div class="uk-width-1-4@s">
-	        <input class="uk-input" type="number" placeholder="Age">
+	        <input class="uk-input" type="date" name="dob" placeholder="DOB">
 	    </div>
 	    <div class="uk-width-1-2@s">
-	        <input class="uk-input" type="text" placeholder="City">
+	        <input class="uk-input" type="text" name="city" placeholder="City">
 	    </div>
 	    <div class="uk-width-1-2@s">
-	        <input class="uk-input" type="text" placeholder="State">
+	        <input class="uk-input" type="text" name="state" placeholder="State">
 	    </div>
 	     <div class="uk-width-1-1@s">
-	        <input class="uk-input" type="email" placeholder="email">
+	        <input class="uk-input" type="number" name="phone" placeholder="phone">
 	    </div>
 		 <div class="uk-width-1-1@s"><center><input type="submit" value="Update" class="uk-button uk-button-danger"></center></div>
 	    

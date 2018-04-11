@@ -1,3 +1,76 @@
+<?php
+error_reporting(0);
+session_start();
+
+if(!isset($_SESSION["user"])){
+  header("Location: login.php");
+}
+
+?>
+
+
+
+<?php
+$id=$_SESSION["id"];
+$conn=mysqli_connect('localhost','root','','tolldb');
+
+
+ $sql1 = 'SELECT updated FROM user WHERE id="'.$id.'"';
+
+ 
+   $retval1 = mysqli_query( $conn, $sql1 );
+   
+   if(! $retval1) {
+      die('Could not select data');
+   }
+   
+ 
+ $row = mysqli_fetch_array($retval1, MYSQLI_BOTH);
+      $updated=$row[0];
+
+      if($updated==0){
+      	header("Location: update.php");
+      }
+
+
+
+
+
+
+
+ if(!$conn ) {
+      die('Could not connect');
+   }
+   
+   $sql = 'SELECT * FROM details WHERE id="'.$id.'"';
+
+ 
+   $retval = mysqli_query( $conn, $sql );
+   
+   if(! $retval) {
+      die('Could not select data');
+   }
+   
+ 
+ $row = mysqli_fetch_array($retval, MYSQLI_BOTH);
+      $id=$row[0];
+      $uid=$row[1];
+      $vnum=$row[2];
+      $dlnum=$row[3];
+      $city=$row[4];
+      $state=$row[5];
+      $phone=$row[6];
+      $dob=$row[7];
+
+
+
+mysqli_close($conn);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,7 +173,7 @@
 	<center>
 		<div class="dp"></div>
 		<br>
-		<div class="name">John Snow</div>
+		<div class="name"><?php echo $_SESSION["name"];?></div>
 
 		<br>
 
@@ -121,7 +194,7 @@
             <ul class="uk-navbar-nav">
                 <li class="uk-active"><a href="index.php">Home</a></li>
                 
-                <li><a href="login.php">Logout</a></li>
+                <li><a href="_logout.php">Logout</a></li>
             </ul>
 
         </div>
@@ -136,7 +209,7 @@
     	<center>
 		<div class="dp"></div>
 		<br>
-		<div class="name">John Snow</div>
+		<div class="name"<?php echo $_SESSION["name"];?></div>
 
 		<br>
 
@@ -153,19 +226,19 @@
     <table class="uk-table">
     	<tr>
     		<td class="tab_title">Phone no.</td>
-    		<td>8867989898</td>
+    		<td><?php echo $phone;?></td>
     	</tr>
     	<tr>
     		<td class="tab_title">Vehicle No.</td>
-    		<td>KA 04 7643</td>
+    		<td><?php echo $vnum;?></td>
     	</tr>
     	<tr>
     		<td class="tab_title">DL No.</td>
-    		<td>767864</td>
+    		<td><?php echo $dlnum;?></td>
     	</tr>
     	<tr>
     		<td class="tab_title">State</td>
-    		<td>Karnataka</td>
+    		<td><?php echo $state;?></td>
     	</tr>
     </table>
 	</div>
