@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2018 at 05:53 PM
+-- Generation Time: Apr 11, 2018 at 06:16 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -41,13 +41,6 @@ CREATE TABLE `details` (
   `dl` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `details`
---
-
-INSERT INTO `details` (`id`, `uid`, `v_num`, `dl_num`, `city`, `state`, `phone`, `dob`, `rc`, `dl`) VALUES
-('60560836', '1234567890', '8cdbf54740d52370a981741fd184d596.jpg', '48463ba07e42ffddebbc8fdddc9a0ca8.jpg', 'Bangalore', 'Karnataka', 7878787878, '1997-09-16', 'KA278231', '1234');
-
 -- --------------------------------------------------------
 
 --
@@ -60,13 +53,6 @@ CREATE TABLE `toll_event` (
   `toll_id` text NOT NULL,
   `amount` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `toll_event`
---
-
-INSERT INTO `toll_event` (`time`, `v_num`, `toll_id`, `amount`) VALUES
-('2018-04-11 15:30:37', 'KA2L8245', '001', 50);
 
 -- --------------------------------------------------------
 
@@ -82,13 +68,6 @@ CREATE TABLE `user` (
   `updated` int(1) NOT NULL DEFAULT '0',
   `verified` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `email`, `name`, `password`, `updated`, `verified`) VALUES
-('60560836', 'sohaibalam67@gmail.com', 'Sohaib Alam', 'e10adc3949ba59abbe56e057f20f883e', 1, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
