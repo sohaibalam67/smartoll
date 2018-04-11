@@ -85,7 +85,5 @@ try {
 
 
 }
-
 header("Location: _admin.php");
-
 ?>
